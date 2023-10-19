@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header
+      class="h-[55px] bg-slate-300 px-12 flex items-center gap-10 justify-end"
+    >
+      <div class="flex items-center gap-5">
+        <div>
+          <img id="img_user" class="h-8 w-8 rounded-full" alt="" src="" />
+        </div>
+        <div class="text-black font-bold" id="username">billy</div>
+      </div>
+
+      <button
+        class="h-10 w-20 bg-red-500 text-white font-medium rounded-md"
+        onclick="onLogout()"
+      >
+        Log out
+      </button>
+    </header>
+
+    <div class="countainer flex justify-center flex-col">
+      <div class="flex flex-col">
+        <div class="flex flex-col items-center">
+          <label class="font-bold"> Input Task </label>
+          <input
+            class="border"
+            type="text"
+            id="taskId"
+            placeholder="Input task"
+          />
+        </div>
+        <div class="flex flex-col items-center">
+          <label class="font-bold"> Status Task </label>
+          <select class="border" id="statustask">
+            <option value="To-Do">To-Do</option>
+            <option value="On Progres">On Progres</option>
+            <option value="Done">Done</option>
+          </select>
+        </div>
+        <div class="flex flex-col items-center">
+          <label class="font-bold"> Create Date </label>
+          <input
+            class="border"
+            type="datetime-local"
+            id="taskId"
+            placeholder="Masukan task"
+          />
+        </div>
+        <div class="flex flex-col items-center my-4">
+          <button
+            class="bg-sky-500 w-[100px] h-[45px] rounded-md text-white font-bold"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mt-5 flex flex-col mx-20" id="Show_data">
+      <table class="border">
+        <thead class="bg-black text-white">
+          <tr>
+            <th>task</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>cos</th>
+          </tr>
+        </thead>
+        <tbody class="text-center" id="body_table"></tbody>
+      </table>
+    </div>
+    <script src="./js/home.js"></script>
+  </body>
+</html>
